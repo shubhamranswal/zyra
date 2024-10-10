@@ -78,7 +78,21 @@ Zyra features various screens to enhance user experience:
 ![Cart Page Screenshot](path/to/cart_page_screenshot.png)
 
 ## Contributions
-If you wish to contribute to the project, please fork the repository and create a pull request.
+
+We love contributions! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request. Let's make this app even better together!
 
 ## License
-This project is licensed under the MIT License.
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Acknowledgments
+
+- Huge thanks to the Flutter community for their amazing support and resources!
+- Special shoutout to the various libraries and tools that made this project possible! 
+
+## Contact Information
+
+For any questions or support, feel free to reach out:
+
+- Email: [shubhamranswal@gmail.com]
+---
