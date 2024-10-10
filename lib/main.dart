@@ -1,14 +1,21 @@
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:zyra/provider/cart_provider.dart';
 import 'package:zyra/route/route_constants.dart';
 import 'package:zyra/route/router.dart' as router;
 import 'package:zyra/theme/app_theme.dart';
 
-void main() {
-  runApp(const MyApp());
+Future<void> main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => CartProvider()),
+    ],
+    child: const MyApp(),
+  ));
 }
-
-// Thanks for using our template. You are using the free version of the template.
-// 🔗 Full template: https://theflutterway.gumroad.com/l/flutterzyra
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -18,11 +25,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'zyra Template by The Flutter Way',
+      title: 'Zyra',
       theme: AppTheme.lightTheme(context),
       themeMode: ThemeMode.light,
       onGenerateRoute: router.generateRoute,
-      initialRoute: entryPointScreenRoute,
+      initialRoute: splashScreenRoute,
     );
   }
 }

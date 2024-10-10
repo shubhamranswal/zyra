@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import '../../../../constants.dart';
-import 'product_availability_tag.dart';
 
 class ProductInfo extends StatelessWidget {
   const ProductInfo({
@@ -12,13 +11,11 @@ class ProductInfo extends StatelessWidget {
     required this.description,
     required this.rating,
     required this.numOfReviews,
-    required this.isAvailable,
   });
 
   final String title, brand, description;
   final double rating;
   final int numOfReviews;
-  final bool isAvailable;
 
   @override
   Widget build(BuildContext context) {
@@ -41,8 +38,6 @@ class ProductInfo extends StatelessWidget {
             const SizedBox(height: defaultPadding),
             Row(
               children: [
-                ProductAvailabilityTag(isAvailable: isAvailable),
-                const Spacer(),
                 SvgPicture.asset("assets/icons/Star_filled.svg"),
                 const SizedBox(width: defaultPadding / 4),
                 Text(

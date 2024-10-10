@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:zyra/constants.dart';
-import 'package:zyra/route/screen_export.dart';
 
 class AddedToCartMessageScreen extends StatelessWidget {
   const AddedToCartMessageScreen({super.key});
@@ -36,9 +35,10 @@ class AddedToCartMessageScreen extends StatelessWidget {
               const Spacer(flex: 2),
               OutlinedButton(
                 onPressed: () {
-                  Navigator.pushNamed(context, entryPointScreenRoute);
+                  Navigator.pop(context);
+                  Navigator.pop(context);
                 },
-                child: const Text("Continue zyraping"),
+                child: const Text("Continue shopping"),
               ),
               const SizedBox(height: defaultPadding),
               ElevatedButton(

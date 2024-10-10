@@ -15,8 +15,6 @@ class _EntryPointState extends State<EntryPoint> {
   final List _pages = const [
     HomeScreen(),
     DiscoverScreen(),
-    BookmarkScreen(),
-    // EmptyCartScreen(), // if Cart is empty
     CartScreen(),
     ProfileScreen(),
   ];
@@ -38,9 +36,6 @@ class _EntryPointState extends State<EntryPoint> {
 
     return Scaffold(
       appBar: AppBar(
-        // pinned: true,
-        // floating: true,
-        // snap: true,
         backgroundColor: Theme.of(context).scaffoldBackgroundColor,
         leading: const SizedBox(),
         leadingWidth: 0,
@@ -55,10 +50,10 @@ class _EntryPointState extends State<EntryPoint> {
         actions: [
           IconButton(
             onPressed: () {
-              Navigator.pushNamed(context, searchScreenRoute);
+              Navigator.pushNamed(context, bookmarkScreenRoute);
             },
             icon: SvgPicture.asset(
-              "assets/icons/Search.svg",
+              "assets/icons/Bookmark.svg",
               height: 24,
               colorFilter: ColorFilter.mode(
                   Theme.of(context).textTheme.bodyLarge!.color!,
@@ -66,9 +61,7 @@ class _EntryPointState extends State<EntryPoint> {
             ),
           ),
           IconButton(
-            onPressed: () {
-              Navigator.pushNamed(context, notificationsScreenRoute);
-            },
+            onPressed: () {},
             icon: SvgPicture.asset(
               "assets/icons/Notification.svg",
               height: 24,
@@ -124,12 +117,6 @@ class _EntryPointState extends State<EntryPoint> {
               activeIcon:
                   svgIcon("assets/icons/Category.svg", color: primaryColor),
               label: "Discover",
-            ),
-            BottomNavigationBarItem(
-              icon: svgIcon("assets/icons/Bookmark.svg"),
-              activeIcon:
-                  svgIcon("assets/icons/Bookmark.svg", color: primaryColor),
-              label: "Bookmark",
             ),
             BottomNavigationBarItem(
               icon: svgIcon("assets/icons/Bag.svg"),

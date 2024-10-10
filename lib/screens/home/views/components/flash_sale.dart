@@ -16,8 +16,6 @@ class FlashSale extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        // While loading show 👇
-        // const BannerMWithCounterSkelton(),
         BannerMWithCounter(
           duration: const Duration(hours: 8),
           text: "Super Flash Sale \n50% Off",
@@ -31,8 +29,6 @@ class FlashSale extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        // While loading show 👇
-        // const ProductsSkelton(),
         SizedBox(
           height: 220,
           child: ListView.builder(
@@ -51,9 +47,9 @@ class FlashSale extends StatelessWidget {
                 brandName: demoFlashSaleProducts[index].brandName,
                 title: demoFlashSaleProducts[index].title,
                 price: demoFlashSaleProducts[index].price,
-                priceAfetDiscount:
-                    demoFlashSaleProducts[index].priceAfetDiscount,
-                discountpercent: demoFlashSaleProducts[index].dicountpercent,
+                priceAfterDiscount:
+                    demoFlashSaleProducts[index].priceAfterDiscount,
+                discountPercent: demoFlashSaleProducts[index].discountPercent,
                 press: () {
                   Navigator.pushNamed(context, productDetailsScreenRoute,
                       arguments: index.isEven);

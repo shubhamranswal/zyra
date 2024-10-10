@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'banner_m.dart';
 
 import '../../../constants.dart';
+import 'banner_m.dart';
 
 class BannerMStyle1 extends StatelessWidget {
   const BannerMStyle1({
@@ -40,7 +40,7 @@ class BannerMStyle1 extends StatelessWidget {
               ),
               const Spacer(),
               const Text(
-                "zyra now",
+                "shop now",
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,

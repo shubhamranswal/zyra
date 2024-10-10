@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1042860433005",
+    "project_id": "zyra-shop",
+    "storage_bucket": "zyra-shop.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042860433005:android:83e500755499d968336964",
+        "android_client_info": {
+          "package_name": "com.shubhamranswal.zyra"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBEVJ9wVbd63CYVjuyaSy6AAU1GgV99FWw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

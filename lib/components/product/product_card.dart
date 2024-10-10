@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_string_escapes
+
 import 'package:flutter/material.dart';
 
 import '../../constants.dart';
@@ -10,14 +12,14 @@ class ProductCard extends StatelessWidget {
     required this.brandName,
     required this.title,
     required this.price,
-    this.priceAfetDiscount,
-    this.discountpercent,
+    this.priceAfterDiscount,
+    this.discountPercent,
     required this.press,
   });
   final String image, brandName, title;
   final double price;
-  final double? priceAfetDiscount;
-  final int? discountpercent;
+  final double? priceAfterDiscount;
+  final int? discountPercent;
   final VoidCallback press;
 
   @override
@@ -35,7 +37,7 @@ class ProductCard extends StatelessWidget {
             child: Stack(
               children: [
                 NetworkImageWithLoader(image, radius: defaultBorderRadious),
-                if (discountpercent != null)
+                if (discountPercent != null)
                   Positioned(
                     right: defaultPadding / 2,
                     top: defaultPadding / 2,
@@ -49,7 +51,7 @@ class ProductCard extends StatelessWidget {
                             Radius.circular(defaultBorderRadious)),
                       ),
                       child: Text(
-                        "$discountpercent% off",
+                        "$discountPercent% off",
                         style: const TextStyle(
                             color: Colors.white,
                             fontSize: 10,
@@ -85,11 +87,11 @@ class ProductCard extends StatelessWidget {
                         .copyWith(fontSize: 12),
                   ),
                   const Spacer(),
-                  priceAfetDiscount != null
+                  priceAfterDiscount != null
                       ? Row(
                           children: [
                             Text(
-                              "\₹$priceAfetDiscount",
+                              "\₹$priceAfterDiscount",
                               style: const TextStyle(
                                 color: Color(0xFF31B0D8),
                                 fontWeight: FontWeight.w500,

@@ -1,6 +1,9 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
+import 'package:pinput/pinput.dart';
+import 'package:zyra/components/custom_modal_bottom_sheet.dart';
 import 'package:zyra/constants.dart';
+import 'package:zyra/control/auth/phone_auth.dart';
 import 'package:zyra/route/route_constants.dart';
 
 import 'components/login_form.dart';
@@ -86,7 +89,85 @@ class _LoginScreenState extends State<LoginScreen> {
                     onPressed: () {
                       if (_formKey.currentState!.validate()) {
                         if (checkBoxForTerms) {
-                          Navigator.pushNamed(context, entryPointScreenRoute);
+                          final otpFormKey = GlobalKey<FormState>();
+
+                          customModalBottomSheet(
+                            context,
+                            child: Padding(
+                              padding: const EdgeInsets.symmetric(
+                                  vertical: 24, horizontal: 32),
+                              child: Column(
+                                children: [
+                                  Align(
+                                    alignment: Alignment.topLeft,
+                                    child: GestureDetector(
+                                      onTap: () => Navigator.pop(context),
+                                      child: const Icon(
+                                        Icons.arrow_back,
+                                        size: 32,
+                                        color: Colors.black54,
+                                      ),
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 18,
+                                  ),
+                                  const Text(
+                                    'Verification',
+                                    style: TextStyle(
+                                      fontSize: 22,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                  const SizedBox(
+                                    height: 10,
+                                  ),
+                                  const Text(
+                                    "Enter your OTP",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black38,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  const SizedBox(
+                                    height: 28,
+                                  ),
+                                  Form(
+                                    key: otpFormKey,
+                                    child: Pinput(
+                                      keyboardType: TextInputType.number,
+                                      length: 4,
+                                      pinputAutovalidateMode:
+                                          PinputAutovalidateMode.onSubmit,
+                                      onCompleted: (otp) {
+                                        PhoneAuth.login(context, otp);
+                                      },
+                                    ),
+                                  ),
+                                  const Text(
+                                    "Didn't you receive any code?",
+                                    style: TextStyle(
+                                      fontSize: 14,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.black38,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                  const Text(
+                                    "Resend New Code",
+                                    style: TextStyle(
+                                      fontSize: 18,
+                                      fontWeight: FontWeight.bold,
+                                      color: Colors.purple,
+                                    ),
+                                    textAlign: TextAlign.center,
+                                  ),
+                                ],
+                              ),
+                            ),
+                          );
                         }
                       }
                     },

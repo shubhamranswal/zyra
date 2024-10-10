@@ -23,8 +23,6 @@ class BestSellers extends StatelessWidget {
             style: Theme.of(context).textTheme.titleSmall,
           ),
         ),
-        // While loading use 👇
-        // const ProductsSkelton(),
         SizedBox(
           height: 220,
           child: ListView.builder(
@@ -43,9 +41,9 @@ class BestSellers extends StatelessWidget {
                 brandName: demoBestSellersProducts[index].brandName,
                 title: demoBestSellersProducts[index].title,
                 price: demoBestSellersProducts[index].price,
-                priceAfetDiscount:
-                    demoBestSellersProducts[index].priceAfetDiscount,
-                discountpercent: demoBestSellersProducts[index].dicountpercent,
+                priceAfterDiscount:
+                    demoBestSellersProducts[index].priceAfterDiscount,
+                discountPercent: demoBestSellersProducts[index].discountPercent,
                 press: () {
                   Navigator.pushNamed(context, productDetailsScreenRoute,
                       arguments: index.isEven);

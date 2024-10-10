@@ -1,26 +1,42 @@
 import 'package:flutter/material.dart';
 
-class SizeGuideScreen extends StatefulWidget {
+import '../../../constants.dart';
+import 'components/inches_size_table.dart';
+
+class SizeGuideScreen extends StatelessWidget {
   const SizeGuideScreen({super.key});
 
   @override
-  State<SizeGuideScreen> createState() => _SizeGuideScreenState();
-}
-
-class _SizeGuideScreenState extends State<SizeGuideScreen> {
-  bool _isShowCentimetersSize = false;
-
-  void updateSizes() {
-    setState(() {
-      _isShowCentimetersSize = !_isShowCentimetersSize;
-    });
-  }
-
-  @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text("Size Guide"),
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            const SizedBox(height: defaultPadding),
+            Padding(
+              padding:
+                  const EdgeInsets.symmetric(horizontal: defaultPadding / 2),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const SizedBox(
+                    width: 40,
+                    child: BackButton(),
+                  ),
+                  Text(
+                    "Size Chart",
+                    style: Theme.of(context).textTheme.titleSmall,
+                  ),
+                  const SizedBox(width: 40),
+                ],
+              ),
+            ),
+            const Padding(
+              padding: EdgeInsets.all(defaultPadding),
+              child: InchesSizeTable(),
+            )
+          ],
+        ),
       ),
     );
   }
