@@ -41,3 +41,9 @@ app.*.map.json
 
 # Exceptions to above rules.
 !/packages/flutter_tools/test/data/dart_dependencies_test/**/.packages
+
+# Google API key and other resources
+GoogleService-Info.plist
+google-services.json
+firebase_options.dart
+firebase.json

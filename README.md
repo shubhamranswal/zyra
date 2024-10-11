@@ -1,6 +1,9 @@
 # Zyra - Fashion, Delivered in a Flash
 ---
-### Well-Organized Project for Easy Customization
+
+### Download and try ```![Click Here](https://github.com/shubhamranswal/zyra/releases/download/APK/app-release.apk)```
+
+### Project Structure - MVC
 
 ![Zyra Project Structure](assets/readme/project_structure.png)
 
@@ -11,6 +14,7 @@
 - **Product Listing**: Responsive grid and list views to browse items.
 - **Cart Management**: Add, remove, and update quantities of items in the cart.
 - **User Sessions**: Users remain logged in until they choose to log out.
+- **Provider**: State manager used in this application.
 
 ## Screens in Zyra
 
@@ -78,22 +82,34 @@ Zyra features various screens to enhance user experience:
 ## Screenshots
 
 **Splash Screen:**
-![Splash Page Screenshot](assets/readme/splashscreen.png)
+<p align="center">
+  <img src="assets/readme/splashscreen.png" alt="Splash Page Screenshot" style="width: 1100px; height: auto;">
+</p>
 
 **Landing Page:**
-![Landing Page Screenshot](assets/readme/home.mp4)
+<p align="center">
+  <img src="assets/readme/home.gif" alt="Landing Page Screenshot" style="width: 1100px; height: auto;">
+</p>
 
 **Login Screen:**
-![Login Screen Screenshot](assets/readme/login.mp4)
+<p align="center">
+  <img src="assets/readme/login.gif" alt="Login Page Screenshot" style="width: 1100px; height: auto;">
+</p>
 
 **Discover Page & Product Details:**
-![Product Listing Screenshot](assets/readme/discover.mp4)
+<p align="center">
+  <img src="assets/readme/discover.gif" alt="Discover Page Screenshot" style="width: 1100px; height: auto;">
+</p>
 
 **Cart Page:**
-![Cart Page Screenshot](assets/readme/cart.mp4)
+<p align="center">
+  <img src="assets/readme/cart.gif" alt="Cart Page Screenshot" style="width: 1100px; height: auto;">
+</p>
 
 **Profile Page:**
-![Profile Page Screenshot](assets/readme/profile.mp4)
+<p align="center">
+  <img src="assets/readme/profile.gif" alt="Profile Page Screenshot" style="width: 1100px; height: auto;">
+</p>
 
 ## Contributions
 
