@@ -9,11 +9,9 @@ class PhoneAuth {
 
   static Future<void> login(BuildContext context, String otp) async {
     if (otp == '1234') {
-      Navigator.pop(context);
       UserCredential userCredential = await auth.signInAnonymously();
       user = userCredential.user;
       if (user != null) {
-        Navigator.pop(context);
         Navigator.pushReplacementNamed(context, entryPointScreenRoute);
       } else {
         ScaffoldMessenger.of(context).showSnackBar(

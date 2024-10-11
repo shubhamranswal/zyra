@@ -35,7 +35,7 @@ class CartListItem extends StatelessWidget {
             aspectRatio: 1.15,
             child: Stack(
               children: [
-                NetworkImageWithLoader(image, radius: defaultBorderRadious),
+                NetworkImageWithLoader(image, radius: defaultBorderRadius),
               ],
             ),
           ),

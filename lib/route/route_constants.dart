@@ -1,6 +1,5 @@
 const String onboardingScreenRoute = "onboarding";
 const String logInScreenRoute = "login";
-const String termsOfServicesScreenRoute = "terms_of_services";
 const String productDetailsScreenRoute = "product_details";
 const String productReviewsScreenRoute = "product_reviews";
 const String homeScreenRoute = "home";

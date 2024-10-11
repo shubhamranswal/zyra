@@ -18,9 +18,7 @@ class LoginForm extends StatelessWidget {
       child: Column(
         children: [
           TextFormField(
-            onSaved: (name) {
-              // Email
-            },
+            onSaved: (name) {},
             validator: nameValidator.call,
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.name,
@@ -47,9 +45,7 @@ class LoginForm extends StatelessWidget {
           ),
           const SizedBox(height: defaultPadding),
           TextFormField(
-            onSaved: (phoneNumber) {
-              // Password
-            },
+            onSaved: (phoneNumber) {},
             validator: phoneNumberValidator.call,
             textInputAction: TextInputAction.next,
             keyboardType: TextInputType.phone,

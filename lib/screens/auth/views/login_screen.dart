@@ -4,7 +4,6 @@ import 'package:pinput/pinput.dart';
 import 'package:zyra/components/custom_modal_bottom_sheet.dart';
 import 'package:zyra/constants.dart';
 import 'package:zyra/control/auth/phone_auth.dart';
-import 'package:zyra/route/route_constants.dart';
 
 import 'components/login_form.dart';
 
@@ -47,7 +46,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                   const SizedBox(height: defaultPadding),
                   LoginForm(formKey: _formKey),
-                  const SizedBox(height: defaultPadding),
+                  const SizedBox(height: defaultPadding / 4),
                   Row(
                     children: [
                       Checkbox(
@@ -65,10 +64,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             children: [
                               TextSpan(
                                 recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    Navigator.pushNamed(
-                                        context, termsOfServicesScreenRoute);
-                                  },
+                                  ..onTap = () {},
                                 text: " Terms of service ",
                                 style: const TextStyle(
                                   color: primaryColor,
@@ -84,13 +80,29 @@ class _LoginScreenState extends State<LoginScreen> {
                       )
                     ],
                   ),
-                  const SizedBox(height: defaultPadding * 2),
+                  const SizedBox(height: defaultPadding * 1.5),
                   ElevatedButton(
                     onPressed: () {
+                      FocusManager.instance.primaryFocus?.unfocus();
                       if (_formKey.currentState!.validate()) {
                         if (checkBoxForTerms) {
-                          final otpFormKey = GlobalKey<FormState>();
+                          const defaultPinTheme = PinTheme(
+                            width: 64,
+                            height: 64,
+                            textStyle: TextStyle(
+                              fontSize: 22,
+                              color: Color.fromRGBO(30, 60, 87, 1),
+                              fontWeight: FontWeight.bold,
+                            ),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.only(
+                                  topLeft: Radius.circular(40),
+                                  bottomRight: Radius.circular(40)),
+                              color: Colors.black,
+                            ),
+                          );
 
+                          final otpFormKey = GlobalKey<FormState>();
                           customModalBottomSheet(
                             context,
                             child: Padding(
@@ -110,38 +122,55 @@ class _LoginScreenState extends State<LoginScreen> {
                                     ),
                                   ),
                                   const SizedBox(
-                                    height: 18,
+                                    height: defaultPadding / 2,
                                   ),
-                                  const Text(
+                                  Text(
                                     'Verification',
-                                    style: TextStyle(
-                                      fontSize: 22,
-                                      fontWeight: FontWeight.bold,
-                                    ),
+                                    textAlign: TextAlign.center,
+                                    style: Theme.of(context)
+                                        .textTheme
+                                        .headlineSmall!
+                                        .copyWith(fontWeight: FontWeight.w500),
                                   ),
-                                  const SizedBox(
-                                    height: 10,
-                                  ),
+                                  const SizedBox(height: defaultPadding / 2),
                                   const Text(
                                     "Enter your OTP",
-                                    style: TextStyle(
-                                      fontSize: 14,
-                                      fontWeight: FontWeight.bold,
-                                      color: Colors.black38,
-                                    ),
                                     textAlign: TextAlign.center,
                                   ),
-                                  const SizedBox(
-                                    height: 28,
-                                  ),
+                                  const SizedBox(height: defaultPadding / 2),
                                   Form(
                                     key: otpFormKey,
                                     child: Pinput(
+                                      defaultPinTheme: defaultPinTheme,
+                                      focusedPinTheme: defaultPinTheme.copyWith(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0),
+                                          color: Colors.red,
+                                        ),
+                                      ),
+                                      submittedPinTheme:
+                                          defaultPinTheme.copyWith(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0),
+                                          color: Colors.green,
+                                        ),
+                                      ),
+                                      followingPinTheme:
+                                          defaultPinTheme.copyWith(
+                                        decoration: BoxDecoration(
+                                          borderRadius:
+                                              BorderRadius.circular(5.0),
+                                          color: Colors.grey,
+                                        ),
+                                      ),
                                       keyboardType: TextInputType.number,
                                       length: 4,
                                       pinputAutovalidateMode:
                                           PinputAutovalidateMode.onSubmit,
                                       onCompleted: (otp) {
+                                        Navigator.pop(context);
                                         PhoneAuth.login(context, otp);
                                       },
                                     ),

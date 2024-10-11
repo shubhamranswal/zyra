@@ -9,7 +9,6 @@ Route<dynamic> generateRoute(RouteSettings settings) {
       return MaterialPageRoute(
         builder: (context) => const OnBoardingScreen(),
       );
-
     case logInScreenRoute:
       return MaterialPageRoute(
         builder: (context) => const LoginScreen(),

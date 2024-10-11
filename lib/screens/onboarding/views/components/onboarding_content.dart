@@ -19,16 +19,12 @@ class OnboardingContent extends StatelessWidget {
     return Column(
       children: [
         const Spacer(),
-
         if (isTextOnTop)
           OnboardTitleDescription(
             title: title,
             description: description,
           ),
         if (isTextOnTop) const Spacer(),
-
-        /// if you are using SVG then replace [Image.asset] with [SvgPicture.asset]
-
         Image.asset(
           image,
           height: 250,
@@ -40,7 +36,6 @@ class OnboardingContent extends StatelessWidget {
             description:
                 "Here you’ll see rich varieties of goods, carefully classified for seamless browsing experience.",
           ),
-
         const Spacer(),
       ],
     );

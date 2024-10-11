@@ -2,7 +2,7 @@
 ---
 ### Well-Organized Project for Easy Customization
 
-![Zyra Project Structure](https://your-link-to-structure-image)
+![Zyra Project Structure](assets/readme/project_structure.png)
 
 ### Key Features
 
@@ -23,9 +23,19 @@ Zyra features various screens to enhance user experience:
 - Login
 - OTP Verification (Simulated)
 
+### Home
+- Home with carousels
+- Product Listings in sections
+
+### Discover
+- Search Product in Grid
+- Search Product in List
+
 ### Product
-- Product Listings
 - Product Details
+- Color, Size and Quantity
+- Size Chart
+- Additional Details
 
 ### Cart
 - View & Manage Cart
@@ -63,6 +73,8 @@ Zyra features various screens to enhance user experience:
 - On the login screen, enter any phone number and proceed.
 - Enter `1234` as the OTP to simulate successful login.
 
+### This project has been tested on Android devices only. May require some additional process to test in iOS devices.
+
 ## Screenshots
 
 **Landing Page:**
@@ -72,7 +84,7 @@ Zyra features various screens to enhance user experience:
 ![Login Screen Screenshot](path/to/login_screen_screenshot.png)
 
 **Product Listing:**
-![Product Listing Screenshot](path/to/product_listing_screenshot.png)
+![Product Listing Screenshot](assets/readme/project_structure.png)
 
 **Cart Page:**
 ![Cart Page Screenshot](path/to/cart_page_screenshot.png)
@@ -88,7 +100,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ## Acknowledgments
 
 - Huge thanks to the Flutter community for their amazing support and resources!
-- Special shoutout to the various libraries and tools that made this project possible! 
+- Special shoutout to the various libraries and tools that made this project possible!
 
 ## Contact Information
 

@@ -40,7 +40,7 @@ class SecondaryProductCard extends StatelessWidget {
             aspectRatio: 1.15,
             child: Stack(
               children: [
-                NetworkImageWithLoader(image, radius: defaultBorderRadious),
+                NetworkImageWithLoader(image, radius: defaultBorderRadius),
                 if (discountPercent != null)
                   Positioned(
                     right: defaultPadding / 2,
@@ -52,7 +52,7 @@ class SecondaryProductCard extends StatelessWidget {
                       decoration: const BoxDecoration(
                         color: errorColor,
                         borderRadius: BorderRadius.all(
-                            Radius.circular(defaultBorderRadious)),
+                            Radius.circular(defaultBorderRadius)),
                       ),
                       child: Text(
                         "$discountPercent% off",

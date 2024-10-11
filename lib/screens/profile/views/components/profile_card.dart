@@ -49,7 +49,7 @@ class ProfileCard extends StatelessWidget {
               decoration: const BoxDecoration(
                 color: primaryColor,
                 borderRadius:
-                    BorderRadius.all(Radius.circular(defaultBorderRadious)),
+                    BorderRadius.all(Radius.circular(defaultBorderRadius)),
               ),
               child: Text(
                 proLableText,
