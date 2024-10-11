@@ -1,11 +1,12 @@
 # Zyra - Fashion, Delivered in a Flash
 ---
 
-### Download and try ```![Click Here](https://github.com/shubhamranswal/zyra/releases/download/APK/app-release.apk)```
+### [```Download and try the App: Click Here```](https://github.com/shubhamranswal/zyra/releases/download/APK/app-release.apk)
 
 ### Project Structure - MVC
-
-![Zyra Project Structure](assets/readme/project_structure.png)
+<p align="center">
+  <img src="assets/readme/project_structure.png" alt="Zyra Project Structure" style="width: 400px; height: auto;">
+</p>
 
 ### Key Features
 
@@ -58,8 +59,8 @@ Zyra features various screens to enhance user experience:
 
 1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
-   cd <repository-name>
+   git clone https://github.com/shubhamranswal/zyra.git
+   cd zyra
    ```
 
 2. **Install Dependencies**:
@@ -83,32 +84,32 @@ Zyra features various screens to enhance user experience:
 
 **Splash Screen:**
 <p align="center">
-  <img src="assets/readme/splashscreen.png" alt="Splash Page Screenshot" style="width: 1100px; height: auto;">
+  <img src="assets/readme/splashscreen.png" alt="Splash Page Screenshot" style="width: 300px; height: auto;">
 </p>
 
 **Landing Page:**
 <p align="center">
-  <img src="assets/readme/home.gif" alt="Landing Page Screenshot" style="width: 1100px; height: auto;">
+  <img src="assets/readme/home.gif" alt="Landing Page Screenshot" style="width: 300px; height: auto;">
 </p>
 
 **Login Screen:**
 <p align="center">
-  <img src="assets/readme/login.gif" alt="Login Page Screenshot" style="width: 1100px; height: auto;">
+  <img src="assets/readme/login.gif" alt="Login Page Screenshot" style="width: 300px; height: auto;">
 </p>
 
 **Discover Page & Product Details:**
 <p align="center">
-  <img src="assets/readme/discover.gif" alt="Discover Page Screenshot" style="width: 1100px; height: auto;">
+  <img src="assets/readme/discover.gif" alt="Discover Page Screenshot" style="width: 300px; height: auto;">
 </p>
 
 **Cart Page:**
 <p align="center">
-  <img src="assets/readme/cart.gif" alt="Cart Page Screenshot" style="width: 1100px; height: auto;">
+  <img src="assets/readme/cart.gif" alt="Cart Page Screenshot" style="width: 300px; height: auto;">
 </p>
 
 **Profile Page:**
 <p align="center">
-  <img src="assets/readme/profile.gif" alt="Profile Page Screenshot" style="width: 1100px; height: auto;">
+  <img src="assets/readme/profile.gif" alt="Profile Page Screenshot" style="width: 300px; height: auto;">
 </p>
 
 ## Contributions
