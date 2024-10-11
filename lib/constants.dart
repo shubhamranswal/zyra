@@ -1,34 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:form_field_validator/form_field_validator.dart';
 
-// Just for demo
-const productDemoImg1 = "https://i.imgur.com/CGCyp1d.png";
-const productDemoImg2 = "https://i.imgur.com/AkzWQuJ.png";
-const productDemoImg3 = "https://i.imgur.com/J7mGZ12.png";
-const productDemoImg4 = "https://i.imgur.com/q9oF9Yq.png";
-const productDemoImg5 = "https://i.imgur.com/MsppAcx.png";
-const productDemoImg6 = "https://i.imgur.com/JfyZlnO.png";
-
-// End For demo
-
 const grandisExtendedFont = "Grandis Extended";
 
-// On color 80, 60.... those means opacity
-
-const Color primaryColor = Color(0xFF7B61FF);
+const Color primaryColor = Color(0xFFFF6161);
 
 const MaterialColor primaryMaterialColor =
     MaterialColor(0xFF9581FF, <int, Color>{
-  50: Color(0xFFEFECFF),
-  100: Color(0xFFD7D0FF),
-  200: Color(0xFFBDB0FF),
-  300: Color(0xFFA390FF),
-  400: Color(0xFF8F79FF),
-  500: Color(0xFF7B61FF),
-  600: Color(0xFF7359FF),
-  700: Color(0xFF684FFF),
-  800: Color(0xFF5E45FF),
-  900: Color(0xFF6C56DD),
+  50: Color(0xFFFFECEC),
+  100: Color(0xFFFFD0D0),
+  200: Color(0xFFFFB0B0),
+  300: Color(0xFFFF9090),
+  400: Color(0xFFFF7979),
+  500: Color(0xFFFF6161),
+  600: Color(0xFFFF5959),
+  700: Color(0xFFFF4F4F),
+  800: Color(0xFFFF4545),
+  900: Color(0xFFDD5656),
 });
 
 const Color blackColor = Color(0xFF16161E);
@@ -50,12 +38,6 @@ const Color whileColor5 = Color(0xFF0D0D0D);
 const Color greyColor = Color(0xFFB8B5C3);
 const Color lightGreyColor = Color(0xFFF8F8F9);
 const Color darkGreyColor = Color(0xFF1C1C25);
-// const Color greyColor80 = Color(0xFFC6C4CF);
-// const Color greyColor60 = Color(0xFFD4D3DB);
-// const Color greyColor40 = Color(0xFFE3E1E7);
-// const Color greyColor20 = Color(0xFFF1F0F3);
-// const Color greyColor10 = Color(0xFFF8F8F9);
-// const Color greyColor5 = Color(0xFFFBFBFC);
 
 const Color purpleColor = Color(0xFF7B61FF);
 const Color successColor = Color(0xFF2ED573);

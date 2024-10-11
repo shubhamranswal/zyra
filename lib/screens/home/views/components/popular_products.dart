@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:zyra/components/product/product_card.dart';
-import 'package:zyra/models/product_model.dart';
 import 'package:zyra/route/screen_export.dart';
 
 import '../../../../constants.dart';
+import '../../../../dummyData.dart';
 
 class PopularProducts extends StatelessWidget {
   const PopularProducts({
@@ -28,22 +28,19 @@ class PopularProducts extends StatelessWidget {
           child: ListView.builder(
             scrollDirection: Axis.horizontal,
             // Find demoPopularProducts on models/ProductModel.dart
-            itemCount: demoPopularProducts.length,
+            itemCount: popularProducts.length,
             itemBuilder: (context, index) => Padding(
               padding: EdgeInsets.only(
                 left: defaultPadding,
-                right: index == demoPopularProducts.length - 1
-                    ? defaultPadding
-                    : 0,
+                right: index == popularProducts.length - 1 ? defaultPadding : 0,
               ),
               child: ProductCard(
-                image: demoPopularProducts[index].image,
-                brandName: demoPopularProducts[index].brandName,
-                title: demoPopularProducts[index].title,
-                price: demoPopularProducts[index].price,
-                priceAfterDiscount:
-                    demoPopularProducts[index].priceAfterDiscount,
-                discountPercent: demoPopularProducts[index].discountPercent,
+                image: popularProducts[index].image,
+                brandName: popularProducts[index].brandName,
+                title: popularProducts[index].title,
+                price: popularProducts[index].price,
+                priceAfterDiscount: popularProducts[index].priceAfterDiscount,
+                discountPercent: popularProducts[index].discountPercent,
                 press: () {
                   Navigator.pushNamed(context, productDetailsScreenRoute,
                       arguments: index.isEven);

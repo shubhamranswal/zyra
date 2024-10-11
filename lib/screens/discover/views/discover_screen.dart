@@ -5,6 +5,7 @@ import 'package:zyra/screens/discover/views/components/search_form.dart';
 
 import '../../../components/product/product_card.dart';
 import '../../../components/product/secondary_product_card.dart';
+import '../../../dummyData.dart';
 import '../../../route/route_constants.dart';
 
 class DiscoverScreen extends StatefulWidget {
@@ -17,10 +18,8 @@ class DiscoverScreen extends StatefulWidget {
 class _DiscoverScreenState extends State<DiscoverScreen> {
   String _searchQuery = '';
   bool _isGridView = false;
-  List<ProductModel> allProducts = demoPopularProducts +
-      demoBestSellersProducts +
-      kidsProducts +
-      demoFlashSaleProducts;
+  List<ProductModel> allProducts =
+      popularProducts + couplesPartyWear + kidsProducts + menProducts;
 
   @override
   Widget build(BuildContext context) {

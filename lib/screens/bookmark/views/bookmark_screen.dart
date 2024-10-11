@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:zyra/components/product/product_card.dart';
-import 'package:zyra/models/product_model.dart';
 import 'package:zyra/route/route_constants.dart';
 
 import '../../../constants.dart';
+import '../../../dummyData.dart';
 
 class BookmarkScreen extends StatelessWidget {
   const BookmarkScreen({super.key});
@@ -42,19 +42,19 @@ class BookmarkScreen extends StatelessWidget {
               delegate: SliverChildBuilderDelegate(
                 (BuildContext context, int index) {
                   return ProductCard(
-                    image: demoPopularProducts[index].image,
-                    brandName: demoPopularProducts[index].brandName,
-                    title: demoPopularProducts[index].title,
-                    price: demoPopularProducts[index].price,
+                    image: popularProducts[index].image,
+                    brandName: popularProducts[index].brandName,
+                    title: popularProducts[index].title,
+                    price: popularProducts[index].price,
                     priceAfterDiscount:
-                        demoPopularProducts[index].priceAfterDiscount,
-                    discountPercent: demoPopularProducts[index].discountPercent,
+                        popularProducts[index].priceAfterDiscount,
+                    discountPercent: popularProducts[index].discountPercent,
                     press: () {
                       Navigator.pushNamed(context, productDetailsScreenRoute);
                     },
                   );
                 },
-                childCount: demoPopularProducts.length,
+                childCount: popularProducts.length,
               ),
             ),
           ),

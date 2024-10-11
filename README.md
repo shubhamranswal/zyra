@@ -77,17 +77,23 @@ Zyra features various screens to enhance user experience:
 
 ## Screenshots
 
+**Splash Screen:**
+![Splash Page Screenshot](assets/readme/splashscreen.png)
+
 **Landing Page:**
-![Landing Page Screenshot](path/to/landing_page_screenshot.png)
+![Landing Page Screenshot](assets/readme/home.mp4)
 
 **Login Screen:**
-![Login Screen Screenshot](path/to/login_screen_screenshot.png)
+![Login Screen Screenshot](assets/readme/login.mp4)
 
-**Product Listing:**
-![Product Listing Screenshot](assets/readme/project_structure.png)
+**Discover Page & Product Details:**
+![Product Listing Screenshot](assets/readme/discover.mp4)
 
 **Cart Page:**
-![Cart Page Screenshot](path/to/cart_page_screenshot.png)
+![Cart Page Screenshot](assets/readme/cart.mp4)
+
+**Profile Page:**
+![Profile Page Screenshot](assets/readme/profile.mp4)
 
 ## Contributions
 
@@ -101,6 +107,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 - Huge thanks to the Flutter community for their amazing support and resources!
 - Special shoutout to the various libraries and tools that made this project possible!
+- Assets taken from multiple github repositories, google search index and etc.
 
 ## Contact Information
 

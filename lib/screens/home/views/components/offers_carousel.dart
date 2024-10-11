@@ -26,25 +26,32 @@ class _OffersCarouselState extends State<OffersCarousel> {
   // Offers List
   List offers = [
     BannerMStyle1(
+      image:
+          "https://t4.ftcdn.net/jpg/04/15/97/33/360_F_415973312_5yg3MrkRdi2SMHyVKbB4h7GgE5HrgUlb.jpg",
       text: "New items with \nFree shipping",
       press: () {},
     ),
     BannerMStyle2(
+      image:
+          "https://sallyfaye.co.uk/wp-content/uploads/2020/09/6CB008CD-F1A1-42F1-8774-07B6951D547B.jpeg",
       title: "Black \nfriday",
       subtitle: "Collection",
-      discountParcent: 50,
+      discountPercent: 50,
       press: () {},
     ),
     BannerMStyle3(
+      image:
+          "https://img.freepik.com/premium-photo/fashion-banner-template-with-photo_641503-271534.jpg",
       title: "Grab \nyours now",
-      discountParcent: 50,
+      discountPercent: 50,
       press: () {},
     ),
     BannerMStyle4(
-      // image: , user your image
+      image:
+          "https://as1.ftcdn.net/v2/jpg/05/60/05/22/1000_F_560052254_42BMBsDhwjv4YQwMXBUPvurHIj4Ct8RM.jpg",
       title: "SUMMER \nSALE",
       subtitle: "SPECIAL OFFER",
-      discountParcent: 80,
+      discountPercent: 80,
       press: () {},
     ),
   ];

@@ -12,11 +12,11 @@ class BannerMStyle3 extends StatelessWidget {
     this.image = "https://i.imgur.com/8REExBV.png",
     required this.title,
     required this.press,
-    required this.discountParcent,
+    required this.discountPercent,
   });
   final String? image;
   final String title;
-  final int discountParcent;
+  final int discountPercent;
   final VoidCallback press;
 
   @override
@@ -41,7 +41,7 @@ class BannerMStyle3 extends StatelessWidget {
                           vertical: defaultPadding / 8),
                       color: Colors.white70,
                       child: Text(
-                        "$discountParcent% off",
+                        "$discountPercent% off",
                         style: const TextStyle(
                           color: Colors.black54,
                           fontWeight: FontWeight.bold,

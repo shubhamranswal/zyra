@@ -36,16 +36,17 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CartButton(
-        price: 140,
+        price: 749,
         title: 'Add to Cart',
         press: () {
           Provider.of<CartProvider>(context, listen: false).addItem(CartItem(
-            productId: "111",
-            title: "Sleeveless Ruffle",
-            image: "https://i.imgur.com/CGCyp1d.png",
-            price: 140,
-            brandName: "LIPSY LONDON",
-          ));
+              productId: "DEMO1",
+              title: "Men's Tee",
+              image:
+                  "https://m.media-amazon.com/images/I/715nVGPTQaL._AC_UY1100_.jpg",
+              price: 749,
+              brandName: "PUMA",
+              quantity: _productQuantity));
           Navigator.pushNamed(context, addedToCard);
         },
       ),
@@ -64,15 +65,21 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
               ],
             ),
             const ProductImages(
-              images: [productDemoImg1, productDemoImg2, productDemoImg3],
+              images: [
+                "https://m.media-amazon.com/images/I/715nVGPTQaL._AC_UY1100_.jpg",
+                "https://m.media-amazon.com/images/I/51C-pA9bk9L._SX466_.jpg",
+                "https://m.media-amazon.com/images/I/61IeOb701hL._SX466_.jpg",
+                "https://m.media-amazon.com/images/I/51UXY25jRuL._SX466_.jpg",
+                "https://m.media-amazon.com/images/I/51fvl5ProLL._SX466_.jpg"
+              ],
             ),
             const ProductInfo(
-              brand: "LIPSY LONDON",
-              title: "Sleeveless Ruffle",
+              brand: "PUMA",
+              title: "Men's Tee",
               description:
-                  "A cool gray cap in soft corduroy. Watch me.' By buying cotton products from Lindex, you’re supporting more responsibly...",
-              rating: 4.4,
-              numOfReviews: 126,
+                  "Make your game smarter, faster, and better in modern sporting staples equipped with the latest in our innovative athletic technology.",
+              rating: 4.2,
+              numOfReviews: 1258,
             ),
             const SliverToBoxAdapter(child: Divider()),
             SliverPadding(
@@ -83,8 +90,8 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                   children: [
                     const Expanded(
                       child: UnitPrice(
-                        price: 145,
-                        priceAfterDiscount: 134.7,
+                        price: 800,
+                        priceAfterDiscount: 749,
                       ),
                     ),
                     ProductQuantity(
@@ -196,17 +203,18 @@ class _ProductDetailsScreenState extends State<ProductDetailsScreen> {
                 height: 220,
                 child: ListView.builder(
                   scrollDirection: Axis.horizontal,
-                  itemCount: 5,
+                  itemCount: 3,
                   itemBuilder: (context, index) => Padding(
                     padding: EdgeInsets.only(
                         left: defaultPadding,
-                        right: index == 4 ? defaultPadding : 0),
+                        right: index == 2 ? defaultPadding : 0),
                     child: ProductCard(
-                      image: productDemoImg2,
-                      title: "Sleeveless Tiered Dobby Swing Dress",
-                      brandName: "LIPSY LONDON",
-                      price: 24.65,
-                      priceAfterDiscount: index.isEven ? 20.99 : null,
+                      image:
+                          "https://m.media-amazon.com/images/I/51fvl5ProLL._SX466_.jpg",
+                      title: "Puma Men's T-short",
+                      brandName: "PUMA",
+                      price: 999,
+                      priceAfterDiscount: index.isEven ? 749 : null,
                       discountPercent: index.isEven ? 25 : null,
                       press: () {},
                     ),

@@ -12,13 +12,13 @@ class BannerMStyle4 extends StatelessWidget {
     this.image = "https://i.imgur.com/R4iKkDD.png",
     required this.title,
     required this.press,
-    required this.discountParcent,
+    required this.discountPercent,
     this.subtitle,
   });
   final String? image;
   final String title;
   final String? subtitle;
-  final int discountParcent;
+  final int discountPercent;
   final VoidCallback press;
 
   @override
@@ -65,7 +65,7 @@ class BannerMStyle4 extends StatelessWidget {
                     ),
                     // const SizedBox(height: defaultPadding / 4),
                     Text(
-                      "UP TO $discountParcent% OFF",
+                      "UP TO $discountPercent% OFF",
                       style: const TextStyle(
                         fontFamily: grandisExtendedFont,
                         color: Colors.white,

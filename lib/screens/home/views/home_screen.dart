@@ -4,7 +4,7 @@ import 'package:zyra/components/Banner/S/banner_s_style_5.dart';
 import 'package:zyra/constants.dart';
 import 'package:zyra/route/screen_export.dart';
 
-import 'components/best_sellers.dart';
+import 'components/couples_party_wear.dart';
 import 'components/flash_sale.dart';
 import 'components/most_popular.dart';
 import 'components/offer_carousel_and_categories.dart';
@@ -29,9 +29,11 @@ class HomeScreen extends StatelessWidget {
               child: Column(
                 children: [
                   BannerSStyle1(
+                    image:
+                        "https://as1.ftcdn.net/v2/jpg/05/60/05/22/1000_F_560052254_42BMBsDhwjv4YQwMXBUPvurHIj4Ct8RM.jpg",
                     title: "New \narrival",
                     subtitle: "SPECIAL OFFER",
-                    discountParcent: 50,
+                    discountPercent: 50,
                     press: () {
                       Navigator.pushNamed(context, onSaleScreenRoute);
                     },
@@ -51,6 +53,8 @@ class HomeScreen extends StatelessWidget {
                   BannerSStyle5(
                     title: "Black \nfriday",
                     subtitle: "50% Off",
+                    image:
+                        "https://t4.ftcdn.net/jpg/04/15/97/33/360_F_415973312_5yg3MrkRdi2SMHyVKbB4h7GgE5HrgUlb.jpg",
                     bottomText: "Collection".toUpperCase(),
                     press: () {
                       Navigator.pushNamed(context, onSaleScreenRoute);
